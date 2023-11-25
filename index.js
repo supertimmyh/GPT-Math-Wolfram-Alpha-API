@@ -4,7 +4,8 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const WolframAlphaAPI = require('@wolfram-alpha/wolfram-alpha-api')
-const waApi = WolframAlphaAPI('7WG284-4W5W64E4HU')
+require('dotenv').config()
+const waApi = WolframAlphaAPI(process.env.WOLFRAM_ALPHA_API_KEY)
 
 app.use(morgan('tiny'))
 
