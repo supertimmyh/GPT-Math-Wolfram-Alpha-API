@@ -43,3 +43,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Privacy Policy for Custom GPT
+
+[Math Whiz Privacy Policy](https://gist.github.com/91aa2aab8cd4754a40b2d380e696fd47.git)

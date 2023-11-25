@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 const WolframAlphaAPI = require('@wolfram-alpha/wolfram-alpha-api')
 const waApi = WolframAlphaAPI('7WG284-4W5W64E4HU')
