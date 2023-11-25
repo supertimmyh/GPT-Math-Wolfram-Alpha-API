@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: GPT Wolfram Alpha API Math Helper
+  description: This server uses the Wolfram Alpha API to solve questions that users ask.
+servers:
+  - url: localhost:8080
+paths:
+  /:
+    get:
+      summary: Default endpoint
+      operationId: getDefault
+      description: This is a default endpoint with a welcome message.
+      responses:
+        '200':
+          description: Request successful
+          content:
+            text/plain:
+              schema:
+                type: string
+  /getAnswer/{query}:
+    get:
+      summary: Solve a math question
+      operationId: getAnswer
+      description: This endpoint uses the Wolfram Alpha API to solve a math question.
+      parameters:
+        - name: query
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The math question to solve.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            text/html:
+              schema:
+                type: string
+                description: The answer to the math question.
+        '500':
+          description: Server error
+          content:
+            text/plain:
+              schema:
+                type: string
+                description: Error message.``
